@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.effect.DropShadow?>
+<?import java.net.URL?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="org.example.demo.Controllers.StartWindowController">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+
+    <VBox alignment="CENTER" spacing="10">
+        <StackPane >
+            <Rectangle  width="300" height="300"  arcWidth="20" arcHeight="20" fill="white" opacity="0.2" >
+                <effect>
+                    <DropShadow color="slategray" offsetX="5.0" offsetY="5.0"/>
+                </effect>
+            </Rectangle>
+            <VBox alignment="CENTER" spacing="10">
+                <Button fx:id="buttonStart" text="Начать" prefWidth="150" prefHeight="40"/>
+                <Button fx:id="buttonInfo" text="Справка" prefWidth="150" prefHeight="40"/>
+                <Button fx:id="buttonExit" text="Выход" prefWidth="150" prefHeight="40"/>
+            </VBox>
+        </StackPane>
+    </VBox>
+</StackPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fitToWidth="true"  fx:controller="org.example.demo.Controllers.InfoWindowController">
+
+    <VBox spacing="20" style="-fx-padding: 20;">
+
+        <Label text="Справочная информация" style="-fx-font-size: 24px; -fx-font-weight: bold;">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+        <Label text="Добро пожаловать в справочную информацию!"/>
+
+        <VBox spacing="10" style="-fx-padding: 10; -fx-border-width: 1px; -fx-border-color: #ddd;">
+            <Label text="Раздел 1: О программе" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+            <Label text="Название программы: Friendship Bracelets creator" />
+            <Label text="Описание: Данное приложение предназначено для создания схем из обычных изображений или специализированных схем для вышивки" />
+            <Label text="Основные функции: Создание схемы, просмотр готовой схемы, удаление лишних столбцов схемы" />
+            <Label text="Технологии: Программа разработана на Java с использованием библиотеки JavaFX для графического интерфейса и библиотеки OpenCV для обработки изображений" />
+            <Label text="Предупреждение: корректная работа приложения также зависит от выбора исходной картинки для создания схемы: нужно учитывать высокую контрастность и правильное название файлов" />
+        </VBox>
+
+        <VBox spacing="10" style="-fx-padding: 10; -fx-border-width: 1px; -fx-border-color: #ddd;">
+            <Label text="Раздел 2: Создание" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+            <Label text="Авдохина Анастасия Николаевна" />
+            <Label text="Группа: 2413" />
+            <Label text="Год: 2024-2025" />
+        </VBox>
+
+        <VBox spacing="10" style="-fx-padding: 10; -fx-border-width: 1px; -fx-border-color: #ddd;">
+            <Label text="Раздел 3: Пример использования" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+            <Label text="По кнопке Начать стартового окна можно перейти к основным функциям программы"/>
+            <Label text="Главная страница предоставляет возможность создания схемы или использования готовой"/>
+            <Label text="Примечание: если вы запустили программу впервые - раздел Готовых схем будет пуст"/>
+            <Label text="По кнопке Создать схему открывается новое окно, в котором необходимо выбрать картинку для обработки, цвета, которые останутся на схеме (количество цветных ниток без учёта ниток основы) и размер пикселей,"/>
+            <Label text="который определит примерное количество узелков в ряду"/>
+            <Label text="Кнопка Назад - прерывает создание схемы, кнопка Создать схему - поменяет картинку на Предпросмотре на схему, чтобы вы могли либо поменять параметры, либо сохранить схему по кнопке Сохранить"/>
+            <Label text="Чтобы использовать готовую схему по назначению необходимо нажать кнопку Готовые схемы и выбрать там схему, которую вы хотите начать плести"/>
+            <Label text="Поля ввода в левой части Главной страницы позволяют убрать лишние столбцы справа и слева, чтобы уменьшить количество узелков в схеме"/>
+            <Label text="Группа: 2413" />
+            <Label text="Год: 2024-2025" />
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="10">
+            <Button fx:id="buttonReturn" text="Назад" prefWidth="150" prefHeight="40"/>
+        </VBox>
+
+        <Label text="Версия 1.0"/>
+
+    </VBox>
+</ScrollPane>

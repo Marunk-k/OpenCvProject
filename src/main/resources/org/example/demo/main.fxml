@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.demo.Controllers.MainMenuController">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+    <top>
+        <MenuBar>
+            <Menu text="Файл">
+                <MenuItem fx:id="createSchemeMenuItem" text="Создать схему"/>
+                <MenuItem fx:id="openSchemeMenuItem" text="Открыть схему"/>
+                <MenuItem fx:id="exitMenuItem" text="Выход"/>
+            </Menu>
+            <Menu text="Помощь">
+                <MenuItem fx:id="infoMenuItem" text="Справка"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <left>
+        <ToolBar orientation="VERTICAL">
+            <Label text="Обработка схем" textFill="white" style="-fx-padding: 5 0 5 0;"/>
+            <VBox spacing="10" alignment="CENTER">
+                <Button fx:id="buttonCreateSchema" text="Создать схему" prefWidth="150" prefHeight="40"/>
+                <Button fx:id="buttonReadySchemes" text="Готовые схемы" prefWidth="150" prefHeight="40"/>
+            </VBox>
+            <Label text="Удаление столбцов" textFill="white" style="-fx-padding: 5 0 0 0;"/>
+            <Label text="Слева:" textFill="white"/>
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <TextField fx:id="deleteLeftField" prefWidth="150" text="0" />
+            </HBox>
+            <Label text="Справа:" textFill="white"/>
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <TextField fx:id="deleteRightField" prefWidth="150" text="0"/>
+            </HBox>
+            <Label text="Удаление строк" textFill="white" style="-fx-padding: 5 0 0 0;"/>
+            <Label text="Сверху:" textFill="white"/>
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <TextField fx:id="deleteTopField" prefWidth="150" text="0" />
+            </HBox>
+            <Label text="Снизу:" textFill="white"/>
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <TextField fx:id="deleteBottomField" prefWidth="150" text="0"/>
+            </HBox>
+            <Button fx:id="deleteColumnsButton" text="Удалить" />
+            <Label text="Изменение узлов" textFill="white" style="-fx-padding: 5 0 0 0;"/>
+            <TextField fx:id="circleSize" prefWidth="50" text="1"/>
+            <Button fx:id="changeCircleSizeButton" text="Изменить размер"/>
+            <Label text="Текущая связка узлов:" textFill="white" style="-fx-padding: 5 0 0 0;"/>
+            <Button fx:id="upButton" text="Влево"/>
+            <Button fx:id="downButton" text="Вправо"/>
+            <Label text="Текущие узлы" textFill="white" style="-fx-padding: 5 0 0 0;"/>
+            <HBox fx:id="previewHBox" alignment="CENTER" spacing="5" />
+        </ToolBar>
+    </left>
+    <center>
+        <ScrollPane fx:id="scrollPane" pannable="true">
+            <TilePane fx:id="imageTilePane" hgap="10.0" vgap="10.0" />
+        </ScrollPane>
+    </center>
+    <bottom>
+        <Label fx:id="threadsCountLabel" text="Количество нитей основы: 0"
+               minHeight="30"
+               minWidth="160"
+               textFill="white"
+               style="-fx-padding: 5px;"
+        />
+    </bottom>
+</BorderPane>

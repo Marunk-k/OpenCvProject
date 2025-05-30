@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.text.Font?>
+<HBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.Controllers.CreateSchemaSceneController">
+    <children>
+        <VBox spacing="20.0">
+            <children>
+                <Button fx:id="buttonSelectImage" mnemonicParsing="false" text="Выбрать файл">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font>
+                </Button>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Размер пикселей: ">
+                        <font>
+                            <Font name="Verdana" size="14.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="pixelSizeLabel" text="10">
+                        <font>
+                            <Font name="Verdana" size="14.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <Slider fx:id="pixelSizeSlider" min="1" max="50" value="25" majorTickUnit ="1" minorTickCount="0"/>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <Label text="Выберите цвета для схемы: ">
+                        <font>
+                            <Font name="Verdana" size="14.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="colorLabel" text="" />
+                </HBox>
+                <HBox fx:id="colorPalette" spacing="5.0"/>
+                <Button fx:id="buttonCreate" text="Создать схему" layoutX="200" layoutY="350" prefWidth="150" prefHeight="40"/>
+                <Button fx:id="buttonApply" mnemonicParsing="false" text="Сохранить" prefWidth="150" prefHeight="40"/>
+                <Button fx:id="buttonReturn" text="Назад" prefWidth="150" prefHeight="40"/>
+                <Label text="ВАЖНО! Название файла может содержать только цифры и латиницу">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+        <VBox spacing="10.0">
+            <Label text="Предпросмотр:">
+                <font>
+                    <Font name="Verdana" size="14.0" />
+                </font>
+            </Label>
+            <Canvas fx:id="previewCanvas" width="200" height="200" />
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</HBox>
